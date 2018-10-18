@@ -12,6 +12,8 @@ namespace Melt.Data
 
         DataTable GetDataTable(string storedProcedureName, List<SqlParameter> parameters);
 
+        T ExecuteScalarQuery<T>(string query);
+
         T ExecuteScalar<T>(string storedProcedureName, List<SqlParameter> parameters);
 
         void ExecuteNonQuery(string storedProcedureName, List<SqlParameter> parameters);

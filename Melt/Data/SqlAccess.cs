@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Melt.Data
 {
-    public class SqlAccess
+    public class SqlAccess : ISqlAccess
     {
         private string _connectionString;
 
@@ -50,7 +50,7 @@ namespace Melt.Data
 
             return results;
         }
-        
+
         public DataTable GetDataTable(string storedProcedureName)
         {
             return GetDataTable(storedProcedureName, null);
@@ -154,6 +154,29 @@ namespace Melt.Data
             {
                 throw;
             }
+        }
+
+        public T ExecuteScalarQuery<T>(string query)
+        {
+            object response;
+            try
+            {
+                using (var cnx = new SqlConnection(_connectionString))
+                {
+                    using (var cmd = new SqlCommand(query, cnx))
+                    {
+                        cnx.Open();
+                        response = cmd.ExecuteScalar();
+                        cnx.Close();
+                    }
+                }
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+
+            return (T)response;
         }
 
         #endregion
