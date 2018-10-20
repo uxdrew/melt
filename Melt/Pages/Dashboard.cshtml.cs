@@ -1,16 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Melt.Pages
 {
     public class DashboardModel : PageModel
     {
+        public int ClimberTop { get; set; }
+        public int ClimberBottom { get; set; }
         public void OnGet()
         {
         }
+
+        //private int ComputeClimberoffset()
+        //{
+
+        //}
     }
 }

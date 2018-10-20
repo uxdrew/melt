@@ -1,18 +1,28 @@
 ﻿@page
 @model DashboardModel
 
-
+<style>
+    .overlay {
+        position: absolute;
+        top: 70px;
+        left: 910px;
+        width: 100%;
+        height: 100%;
+        background: url("image.png") repeat;
+    }
+</style>
+<script>
+    $(function move() {
+        $(".overlay").delay(20).animate({ top: '65px' }, function () {
+            $(".overlay").delay(20).animate({ top: '70px' }, move);
+        });
+    })
+</script>
 <div class="wrapper">
     <header></header>
-    <article class="main" data-aos="fade-down">
-        <div id="chartdiv" style="padding-top: 50px"></div>
-    </article>
+    <article class="main" data-aos="fade-down"></article>
     <!-- Page Content -->
 
-    @*<div class="container">
-        <div id="chartdiv"></div>
-
-    </div>*@
     <aside class="aside aside-1">
         <div class="container">
             <div class="card" data-aos="fade-right">
@@ -79,6 +89,9 @@
             </div>
         </div>
     </aside>
+    <div class="overlay">
+        <img src="~/images/climber.png" height:"50"; width="50" />
+    </div>
     <aside class="aside aside-2" data-aos="fade-left">
         <h4>Challenges</h4>
         <p class="small">
@@ -105,214 +118,6 @@
         <hr>
     </aside>
 </div>
-
-<script>
-    var chart = AmCharts.makeChart("chartdiv", {
-        "type": "serial",
-        "theme": "dark",
-        "dataProvider": [{
-            "points": 1,
-            "value": 5
-        },
-        {
-            "points": 2,
-            "value": 10
-        },
-        {
-            "points": 3,
-            "value": 15
-        },
-        {
-            "points": 4,
-            "value": 20
-        },
-        {
-            "points": 5,
-            "value": 25
-        },
-        {
-            "points": 6,
-            "value": 30
-        },
-        {
-            "points": 7,
-            "value": 35
-        },
-        {
-            "points": 8,
-            "value": 40
-        },
-        {
-            "points": 9,
-            "value": 45
-        },
-        {
-            "points": 10,
-            "value": 50
-        },
-        {
-            "points": 11,
-            "value": 55
-        },
-        {
-            "points": 12,
-            "value": 60
-        },
-        {
-            "points": 13,
-            "value": 65
-        },
-        {
-            "points": 14,
-            "value": 70
-        },
-        {
-            "points": 15,
-            "value": 75
-        },
-        {
-            "points": 16,
-            "value": 80
-        },
-        {
-            "points": 17,
-            "value": 85
-        },
-        {
-            "points": 18,
-            "value": 90
-        },
-        {
-            "points": 19,
-            "value": 95
-        },
-        {
-            "points": 20,
-            "value": 100
-        },
-        {
-            "points": 21,
-            "value": 95
-        },
-        {
-            "points": 22,
-            "value": 90
-        },
-        {
-            "points": 23,
-            "value": 85
-        },
-        {
-            "points": 24,
-            "value": 80
-        },
-        {
-            "points": 25,
-            "value": 75
-        },
-        {
-            "points": 26,
-            "value": 70
-        },
-        {
-            "points": 27,
-            "value": 65
-        },
-        {
-            "points": 28,
-            "value": 60
-        },
-        {
-            "points": 29,
-            "value": 55
-        },
-        {
-            "points": 30,
-            "value": 50
-        },
-        {
-            "points": 31,
-            "value": 45
-        },
-        {
-            "points": 32,
-            "value": 40
-        },
-        {
-            "points": 33,
-            "value": 35
-        },
-        {
-            "points": 34,
-            "value": 30
-        },
-        {
-            "points": 35,
-            "value": 25
-        },
-        {
-            "points": 36,
-            "value": 20
-        },
-        {
-            "points": 37,
-            "value": 15
-        },
-        {
-            "points": 38,
-            "value": 10
-        },
-        {
-            "points": 39,
-            "value": 5
-        },
-        {
-            "points": 40,
-            "value": 0
-        }
-        ],
-        "valueAxes": [{
-            "axisAlpha": 0,
-            "dashLength": 4,
-            "position": "left",
-            "showFirstLabel": false,
-            "showSecondLabel": false
-        }],
-        "graphs": [{
-            "bulletSize": 0,
-            //"customBullet": "https://www.amcharts.com/lib/3/images/star.png?x",
-            //"customBulletField": "customBullet",
-            "valueField": "value",
-            //"balloonText": "<div style='margin:10px; text-align:left;'><span style='font-size:13px'>[[category]]</span><br><span style='font-size:18px'>Value:[[value]]</span>",
-        }],
-        "marginTop": 20,
-        "marginRight": 70,
-        "marginLeft": 10,
-        "marginBottom": 20,
-        "chartCursor": {
-            "graphBulletSize": 0,
-            "zoomable": false,
-            "valueZoomable": true,
-            "cursorAlpha": 0,
-            "valueLineEnabled": false,
-            "valueLineBalloonEnabled": false,
-            "valueLineAlpha": 0.2
-        },
-        "autoMargins": false,
-
-        "categoryField": "number",
-
-        "categoryAxis": {
-            "axisAlpha": 0,
-            "gridAlpha": 0,
-            "inside": true,
-            "tickLength": 0
-        },
-        //"export": {
-        //    "enabled": true
-        //}
-    });
-</script>
 
 <script>
     AOS.init({
