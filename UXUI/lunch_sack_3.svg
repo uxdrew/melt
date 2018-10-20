@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="140" cy="140" r="140" fill="#D8D8D8"/>
+    <g stroke="#979797" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" transform="translate(68 49)">
+      <polyline points="0 146 0 18 6 31 15 31 15 39 25 39 25 50 34 50 37 57 34 180 18.5 146 18.5 75"/>
+      <path d="M0 146L34 181M19 146L0 146"/>
+      <polyline points="35 182 145 165 145 39 138 36 132 43 123 39 116 46 107 43 100 49 90 43 84 49 75 46 69 53 61 49 53 57 44 53 38 57"/>
+      <polyline points="1 17 8 21 15 14 23 17.5 30 9 38 15 46 9 55 14 61 7.595 71 9 77 3 86 7.595 93 0 103 7.595 110 3 116 14 122 14"/>
+      <path d="M109.5,9 C109.5,11.1149425 109.5,12.4367816 109.5,12.9655172 L109.5,43.5"/>
+      <polyline points="124 14 124 21 135 21 135 31 143 31 143 36"/>
+    </g>
+  </g>
+</svg>
