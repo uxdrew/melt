@@ -4,15 +4,12 @@ namespace Melt.Pages
 {
     public class DashboardModel : PageModel
     {
-        public int ClimberTop { get; set; }
-        public int ClimberBottom { get; set; }
+        public decimal PercentToWorthlessness { get; set; }
+        public decimal Offset { get; set; }
         public void OnGet()
         {
+            Offset = ((PercentToWorthlessness * 3.5M) / 100) + 1;
+
         }
-
-        //private int ComputeClimberoffset()
-        //{
-
-        //}
     }
 }
