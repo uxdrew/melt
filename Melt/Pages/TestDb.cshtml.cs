@@ -7,7 +7,7 @@ namespace Melt.Pages
     {
         private ISqlAccess _sqlAccess;
         public string ServerName { get; set; }
-
+        public string Name { get; set; }
 
         public TestDbModel(ISqlAccess sqlAccess)
         {
@@ -17,6 +17,7 @@ namespace Melt.Pages
         public void OnGet()
         {
             ServerName = _sqlAccess.ExecuteScalarQuery<string>("select @@serverName");
+            Name = "Hackathon Vegas";
         }
     }
 }
