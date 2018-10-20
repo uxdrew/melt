@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Melt - Mockups</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+    <style type="text/css">
+        body {
+            background-color: #30303d;
+            color: #fff;
+        }
+
+        #chartdiv {
+            width: 100%;
+            height: 450px;
+            font-size: 11px;
+            padding-top: 100px;
+        }
+
+        .ml-auto .dropdown-menu {
+            left: auto !important;
+            right: 0px;
+        }
+
+        .btn-fixed-width {
+            width: 250px;
+        }
+
+        i {
+            margin-right: 12px;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .fancy {
+            line-height: 0.5;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .fancy span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .fancy span:before,
+        .fancy span:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid #555;
+            top: 0;
+            width: 120px;
+        }
+
+        .fancy span:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+
+        .fancy span:after {
+            left: 100%;
+            margin-left: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="http://uxdrew.io/melt/brand_alt.svg" width="50" height="50" class="d-inline-block align-top" alt="">
+        </a>
+        <a href="https://uxdrew.io/melt/dashboard.html" class="btn btn-outline-success ml-auto" role="button">Log In</a>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script src="https://www.amcharts.com/lib/3/funnel.js"></script>
+        <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+        <div class="row" style="padding-top: 20px">
+            <div class="col text-center my-4">
+                <h1 class="display-4">Join the millions looking for financial insight
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center my-4">
+                <button type="button" class="btn btn-outline-primary btn-fixed-width"><i class="fab fa-facebook-f"></i>
+                    Sign up with Facebook</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <button type="button" class="btn btn-outline-primary btn-fixed-width"><i class="fab fa-google"></i>
+                    Sign up with Google</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center my-4">
+                <p class="fancy text-muted"><span>or</span></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center my-2">
+                    <a href="https://uxdrew.io/melt/new-user.html" class="btn btn-outline-primary btn-fixed-width" role="button"><i class="far fa-envelope"></i> Use my email</a>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col text-center my-2">
+                <p class="text-muted small">
+                    By signing up for Melt you agree to our <a href="#">Terms of Service</a>
+                    <br>
+                    View our <a href="#">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <p class="text-muted small">
+                    Already a member? <a href="#">Log In</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

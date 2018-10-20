@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	exportEnabled: true,
+	theme: "light1",
+	title:{
+		text: ""
+	},
+	data: [{
+		type: "pyramid",
+		yValueFormatString: "#\"%\"",
+		indexLabelFontColor: "black",
+		indexLabelFontSize: 16,
+		indexLabel: "{label} - {y}",
+		//reversed: true, // Reverses the pyramid
+		dataPoints: [
+			{ y: 100, },
+			{ y: 65, label: "" },
+			{ y: 45, label: "" },
+			{ y: 32, label: "" },
+			{ y: 5, label: "" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

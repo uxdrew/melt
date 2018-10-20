@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="287" viewBox="0 0 440 287">
+  <defs>
+    <linearGradient id="brand-a" x1=".258%" y1="49.75%" y2="39.251%">
+      <stop offset="0%" stop-color="#3023AE"/>
+      <stop offset="47.525%" stop-color="#53A0FD"/>
+      <stop offset="100%" stop-color="#B4EC51"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#2CACE5" stroke="#3123AE" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.336" d="M298.817503,151.839259 L319.748045,113.554054 L435,282 L389.048653,282 L5,282 L164.828432,51.4434007 L197.024327,5 L298.817503,151.839259 Z"/>
+    <path fill="#FFF" d="M196.787222,13 L102.346626,149.017991 C101.735556,149.898083 101.953642,151.106908 102.833734,151.717978 C103.331803,152.063799 103.962918,152.156854 104.539601,151.969501 L196.130761,122.213272 C196.555365,122.075326 197.014552,122.088049 197.430866,122.249295 L294.16316,159.715414 C295.16227,160.102387 296.285911,159.606152 296.672884,158.607042 C296.905376,158.006779 296.824983,157.330284 296.458285,156.801227 L196.787222,13 Z"/>
+    <polygon fill="#FFF" fill-opacity=".25" points="196.966 14 380 277 15 277"/>
+    <path stroke="url(#brand-a)" stroke-linecap="round" stroke-width="10" d="M197,5 L6,282"/>
+    <path stroke="url(#brand-a)" stroke-linecap="round" stroke-width="10" d="M388,5 L197,282" transform="matrix(-1 0 0 1 585 0)"/>
+  </g>
+</svg>

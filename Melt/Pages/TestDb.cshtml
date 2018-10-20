@@ -1,6 +1,24 @@
-﻿@page
+﻿@page "{id?}"
 @model TestDbModel
 @{
-    @Model.ServerName
-    @Model.Name
+    @Model.ServerName<br />
+    @Model.Id
+    <div>
+        <a asp-action="Index" asp-controller="Home" asp-route-name="23">Go Home</a>
+    </div>
+    <div>
+        <a asp-page="/TestDb" asp-route-id="99923">Click for New Id</a>
+    </div>
+    <div>
+        <select asp-for="Member" asp-items="@Html.GetEnumSelectList<TeamMember>()"></select>
+    </div>
+    <div>
+        <input asp-for="ServerName" />
+        <span asp-validation-for="ServerName"></span>
+    </div>
+
+    <footer>
+        @await Component.InvokeAsync("Test")
+        @*<vc:test></vc:test>*@
+    </footer>
 }
