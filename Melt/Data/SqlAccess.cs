@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using Melt.YodleeObjects;
 
 namespace Melt.Data
 {

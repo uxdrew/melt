@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RestSharp;
+using Newtonsoft.Json;
+using Melt.YodleeObjects;
 
 namespace Melt
 {
@@ -11,7 +13,7 @@ namespace Melt
         // Must do CobrandLogin before UserLogin.
 
         // CobrandLogin is the Company login. UserLogin is the individual login.
-        public static void CobrandLogin()
+        public static string CobrandLogin()
         {
             var client = new RestClient("https://developer.api.yodlee.com/ysl/cobrand/login");
             var request = new RestRequest(Method.POST);
@@ -22,9 +24,11 @@ namespace Melt
             request.AddHeader("Content-Type", "application/json");
             request.AddParameter("undefined", "{\r\n    \"cobrand\":{\r\n        \"cobrandLogin\":\"sbCobd7b717f7f57a9deec9bbd7f83f95654d6a\",\r\n        \"cobrandPassword\":\"2031221c-4190-45d8-a56b-494757732d1f\",\r\n        \"locale\":\"en_US\"\r\n    }\r\n}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
+            CobrandLoginResponse cobrandLoginResponse = JsonConvert.DeserializeObject<CobrandLoginResponse>(response.Content);
+            return cobrandLoginResponse.session.cobSession;
         }
 
-        public static void UserLogin()
+        public static User UserLogin(string cobrandSessionId)
         {
             var client = new RestClient("https://developer.api.yodlee.com/ysl/user/login");
             var request = new RestRequest(Method.POST);
@@ -33,9 +37,11 @@ namespace Melt
             request.AddHeader("Cobrand-Name", "restserver");
             request.AddHeader("Api-Version", "1.1");
             request.AddHeader("Content-Type", "application/json");
-            request.AddHeader("Authorization", "cobSession=08062013_0:32c28e9f46d4846e6504f520e68da450ec27ffd7d6a77bc0958f157177dd9d71061a325840c214c6b4a1b66d66ad3e1aac91837ed60e0a9078462afa1f632e27");
+            request.AddHeader("Authorization", string.Format("cobSession={0}", cobrandSessionId));
             request.AddParameter("undefined", "{\r\n    \"user\":{\r\n        \"loginName\":\"sbMemd7b717f7f57a9deec9bbd7f83f95654d6a2\",\r\n        \"password\":\"sbMemd7b717f7f57a9deec9bbd7f83f95654d6a2#123\",\r\n        \"locale\":\"en_US\"\r\n    }\r\n}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
+            User user = JsonConvert.DeserializeObject<User>(response.Content);            
+            return user;
         }
 
         public static void GetAccessTokensForFastLink()
@@ -51,7 +57,7 @@ namespace Melt
             IRestResponse response = client.Execute(request);
         }
 
-        public static void GetAccounts()
+        public static Account GetAccounts(string cobrandSessionId, string userSessionId)
         {
             var client = new RestClient("https://developer.api.yodlee.com/ysl/accounts");
             var request = new RestRequest(Method.GET);
@@ -60,8 +66,10 @@ namespace Melt
             request.AddHeader("Cobrand-Name", "restserver");
             request.AddHeader("Api-Version", "1.1");
             request.AddHeader("Content-Type", "application/json");
-            request.AddHeader("Authorization", "cobSession=08062013_0:32c28e9f46d4846e6504f520e68da450ec27ffd7d6a77bc0958f157177dd9d71061a325840c214c6b4a1b66d66ad3e1aac91837ed60e0a9078462afa1f632e27,userSession=08062013_0:972281bb688a451eefdad0761b0b84ebb7190b688b8293ee69ae0fdf693c9a333d1f35a1e58c2139b66b549c50857f72379a90e1e442718b266fed135cdea76d");
+            request.AddHeader("Authorization", string.Format("cobSession={0}, userSession={1}", cobrandSessionId, userSessionId));
             IRestResponse response = client.Execute(request);
+            Account account = JsonConvert.DeserializeObject<Account>(response.Content);
+            return account;
         }
 
         public static void GetTransactions()
