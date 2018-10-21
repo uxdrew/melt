@@ -47,7 +47,6 @@ namespace Melt
             }
             
             app.UseStaticFiles();
-            app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {

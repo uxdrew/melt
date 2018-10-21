@@ -7,7 +7,10 @@ connection.on("ReceiveMessage", function (message) {
     //var li = document.createElement("li");
     //li.textContent = encodedMsg;
     //document.getElementById("messagesList").appendChild(li);
-    alert(msg);
+    $("#imgTrophy1").addClass("original");
+    $("#imgTrophy2").addClass("original");
+    $("#imgTrophy2").removeClass("grayscale");
+    $("#imgTrophy3").removeClass("grayscale");
 });
 
 connection.start().catch(function (err) {
