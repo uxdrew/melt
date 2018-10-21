@@ -1,187 +1,1 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Melt - Mockups - Dashboard</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
-
-    <!-- Animate on Scroll (AOS) -->
-    <link rel="stylesheet" href="https://uxdrew.io/aos/aos.css">
-
-    <link rel="stylesheet" href="https://uxdrew.io/melt/normalize.css">
-    <link rel="stylesheet" href="https://uxdrew.io/melt/ion.rangeSlider.css">
-    <link rel="stylesheet" href="https://uxdrew.io/melt/ion.rangeSlider.skinFlat.css">
-
-    <style type="text/css">
-        .wrapper {
-            display: flex;
-            flex-flow: row wrap;
-            font-weight: bold;
-            text-align: left;
-        }
-
-            .wrapper > * {
-                padding: 10px;
-                flex: 1 100%;
-            }
-
-        .header {
-            background: tomato;
-        }
-
-        .footer {
-            background: lightgreen;
-        }
-
-        .main {
-            text-align: left;
-            background: deepskyblue;
-            background: url(http://uxdrew.io/melt/mountain.svg) no-repeat center top #FFF;
-        }
-
-        .aside-1 {
-            background: #ecf8fd;
-        }
-
-        .aside-2 {
-            background: #ecf8fd;
-        }
-
-        @@media all and (min-width: 600px) {
-            .aside {
-                flex: 1;
-            }
-        }
-
-        @@media all and (min-width: 800px) {
-            .main {
-                flex: 3 0px;
-            }
-
-            .aside-1 {
-                order: 1;
-            }
-
-            .main {
-                order: 2;
-            }
-
-            .aside-2 {
-                order: 3;
-            }
-
-            .footer {
-                order: 4;
-            }
-        }
-
-        body {
-            background-color: #ecf8fd;
-            color: #fff;
-        }
-
-        #chartdiv {
-            width: 100%;
-            height: 450px;
-            font-size: 11px;
-        }
-
-        .ml-auto .dropdown-menu {
-            left: auto !important;
-            right: 0px;
-        }
-
-        .user-card .card-block .user-image {
-            position: relative;
-            margin: 0 auto;
-            display: inline-block;
-            padding: 5px;
-            width: 110px;
-            height: 110px;
-        }
-
-            .user-card .card-block .user-image img {
-                z-index: 20;
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                width: 100px;
-                height: 100px;
-            }
-
-        .img-radius {
-            border-radius: 50%;
-        }
-
-        .card {
-            border-radius: 0;
-            border: none;
-        }
-    </style>
-
-    <!-- Bootstrap core JavaScript -->
-    
-    <script src="https://uxdrew.io/melt/jquery-1.12.3.min.js"></script>
-    <script src="https://uxdrew.io/melt/ion.rangeSlider.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-
-    <script src="https://uxdrew.io/aos/aos.js"></script>
-
-
-</head>
-
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/melt/home.html">
-            <img src="http://uxdrew.io/melt/brand_alt.svg" width="50" height="50" class="d-inline-block align-top ml-3" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                @*<li class="nav-item active">
-                        <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-                    </li>*@
-                @*<li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            Settings
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Alerts</a>
-                            <a class="dropdown-item" href="#">Account Sync</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">User</a>
-                        </div>
-                    </li>*@
-            </ul>
-            <a href="https://uxdrew.io/melt/home.html" class="btn btn-outline-success ml-auto" role="button">Sign Out</a>
-        </div>
-
-    </nav>
-
-    <div class="container-fluid body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - Melt</p>
-        </footer>
-    </div>
-
-</body>
-</html>
+<!DOCTYPE html> <html lang="en">  <head>     <meta charset="utf-8">     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">     <meta name="description" content="">     <meta name="author" content="">      <title>Melt - Mockups - Dashboard</title>      <!-- Bootstrap core CSS -->     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"           crossorigin="anonymous">      <!-- Animate on Scroll (AOS) -->     <link rel="stylesheet" href="https://uxdrew.io/aos/aos.css">      <link rel="stylesheet" href="https://uxdrew.io/melt/normalize.css">     <link rel="stylesheet" href="https://uxdrew.io/melt/ion.rangeSlider.css">     <link rel="stylesheet" href="https://uxdrew.io/melt/ion.rangeSlider.skinFlat.css">      <style type="text/css">         .wrapper {             display: flex;             flex-flow: row wrap;             font-weight: bold;             text-align: left;         }              .wrapper > * {                 padding: 10px;                 flex: 1 100%;             }          .header {             background: tomato;         }          .footer {             background: lightgreen;         }          .main {             text-align: left;             background: url(http://uxdrew.io/melt/mountain.svg) no-repeat center top;              height: 700px;         }          .aside-1 {             background: #ecf8fd;         }          .aside-2 {             background: #ecf8fd;         }          @@media all and (min-width: 600px) {             .aside {                 flex: 1;             }         }          @@media all and (min-width: 800px) {             .main {                 flex: 3 0px;             }              .aside-1 {                 order: 1;             }              .main {                 order: 2;             }              .aside-2 {                 order: 3;             }              .footer {                 order: 4;             }         }          body {             background-color: #ecf8fd;             color: #fff;         }          #chartdiv {             width: 100%;             height: 450px;             font-size: 11px;         }          .ml-auto .dropdown-menu {             left: auto !important;             right: 0px;         }          .user-card .card-block .user-image {             position: relative;             margin: 0 auto;             display: inline-block;             padding: 5px;             width: 110px;             height: 110px;         }              .user-card .card-block .user-image img {                 z-index: 20;                 position: absolute;                 top: 5px;                 left: 5px;                 width: 100px;                 height: 100px;             }          .img-radius {             border-radius: 50%;         }          .card {             border-radius: 0;             border: none;         }          .grayscale {             filter: grayscale(1);             -webkit-filter: grayscale(1);         }     </style>      <!-- Bootstrap core JavaScript -->      <script src="https://uxdrew.io/melt/jquery-1.12.3.min.js"></script>     <script src="https://uxdrew.io/melt/ion.rangeSlider.js"></script>      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"             crossorigin="anonymous"></script>     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"             crossorigin="anonymous"></script>      <script src="https://uxdrew.io/aos/aos.js"></script>   </head>  <body>     <!-- Navigation Bar -->     <nav class="navbar navbar-expand-lg navbar-light bg-light">         <a class="navbar-brand" href="/melt/home.html">             <img src="http://uxdrew.io/melt/brand_alt.svg" width="50" height="50" class="d-inline-block align-top ml-3" alt="">         </a>         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">             <span class="navbar-toggler-icon"></span>         </button>         <div class="collapse navbar-collapse" id="navbarSupportedContent">             <ul class="navbar-nav mr-auto">                 @*<li class="nav-item active">                     <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>                 </li>*@                 @*<li class="nav-item dropdown">                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"                        aria-haspopup="true" aria-expanded="false">                         Settings                     </a>                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">                         <a class="dropdown-item" href="#">Alerts</a>                         <a class="dropdown-item" href="#">Account Sync</a>                         <div class="dropdown-divider"></div>                         <a class="dropdown-item" href="#">User</a>                     </div>                 </li>*@             </ul>             <a href="https://uxdrew.io/melt/home.html" class="btn btn-outline-success ml-auto" role="button">Sign Out</a>         </div>      </nav>          <div class="container-fluid body-content">         @RenderBody()         <hr />         <footer>             <p>&copy; 2018 - Melt</p>         </footer>     </div>  </body> </html> 
