@@ -12,13 +12,13 @@
 
     $(document).ready(function () {
 
-        @*@{
-            Model.PercentToWorthlessness = 100;
-            Model.Offset = ((@Model.PercentToWorthlessness * 3.5M) / 100) + 1;
-            }*@
-        
+        @{
+            Model.PercentToWorthlessness =  100;
+            Model.Offset = ((@Model.PercentToWorthlessness * 3.8M) / 100) + 1;
+            }
+
         $("#divClimber").parent().css({ position: 'relative' });
-        $("#divClimber").css({ top: (85 * @Model.Offset), left: ((280 - ((85 * @Model.Offset * 0.70) - 55))), position: 'absolute' });
+        $("#divClimber").css({ top: (108 * @Model.Offset) -50, left: ((280 - ((85 * @Model.Offset * 0.70) - 55))) + 25, position: 'absolute' });
     });
 
     $(function move() {
