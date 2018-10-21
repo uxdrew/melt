@@ -5,7 +5,7 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 connection.on("ReceiveMessage", function (message) {
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     if (msg == "DueDate") {
-        $("")
+        $("#divToast").show();
     }
     
     //Show the div

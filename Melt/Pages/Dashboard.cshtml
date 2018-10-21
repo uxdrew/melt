@@ -15,7 +15,7 @@
         @{
             Model.PercentToWorthlessness =  100;
             Model.Offset = ((@Model.PercentToWorthlessness * 3.8M) / 100) + 1;
-            
+
             }
 
         $("#divClimber").parent().css({ position: 'relative' });
@@ -32,6 +32,10 @@
 </script>
 <div class="wrapper">
     <header></header>
+
+    <div id="divToast" style="display:none;">
+        This is a div that should be shown.
+    </div>
     <article class="main" data-aos="fade-down">
         <div id="divClimber" class="overlay">
             @if (Model.PercentToWorthlessness == 0)

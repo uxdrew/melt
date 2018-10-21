@@ -21,13 +21,13 @@ namespace Melt.Controllers
 
         public IActionResult Index()
         {
-            string cobrandSessionId = YodleeAPICaller.CobrandLogin();
-            User user = YodleeAPICaller.UserLogin(cobrandSessionId);
-            // I don't want to talk about it. 
-            Account account = YodleeAPICaller.GetAccounts(cobrandSessionId, user.user.session.userSession);
+            //string cobrandSessionId = YodleeAPICaller.CobrandLogin();
+            //User user = YodleeAPICaller.UserLogin(cobrandSessionId);
+            //// I don't want to talk about it. 
+            //Account account = YodleeAPICaller.GetAccounts(cobrandSessionId, user.user.session.userSession);
 
-            Procs proc = new Procs(access);
-            proc.InsertUserAccount(account, user.user.id);
+            //Procs proc = new Procs(access);
+            //proc.InsertUserAccount(account, user.user.id);
 
             return View();
         }
