@@ -1,11 +1,8 @@
 ﻿var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
 connection.on("ReceiveMessage", function (message) {
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    //var encodedMsg = user + " says " + msg;
-    //var li = document.createElement("li");
-    //li.textContent = encodedMsg;
-    //document.getElementById("messagesList").appendChild(li);
-   
+
+    alert(msg);
     $("#imgTrophy1").addClass("original");
     $("#imgTrophy2").addClass("original");
     $("#imgTrophy3").removeClass("original");
@@ -17,11 +14,11 @@ connection.start().catch(function (err) {
 });
 
 $(document).ready(function () {
-    document.getElementById("btnDueDate").addEventListener("click", function (event) {
-        
-        connection.invoke("SendMessage", "DueDate").catch(function (err) {
-            return console.error(err.toString());
-        });
-        event.preventDefault();
+    $("#btnUpdateMM").on("click", function () {
+        var output = $("#slider_value").text();
+        var url = window.location.href;
+        window.location.replace(url.substring(0, url.indexOf("?")) + "?percent=" + output);
+
+
     });
 });

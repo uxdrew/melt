@@ -1,0 +1,408 @@
+﻿@page
+@model ChatsModel
+
+
+<div itemprop="text" class="blob-wrapper data type-html ">
+    <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+        <tr>
+            <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+            <td id="LC1" class="blob-code blob-code-inner js-file-line">&lt;!DOCTYPE html&gt;</td>
+        </tr>
+        <tr>
+            <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+            <td id="LC2" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">html</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+            <td id="LC3" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+            <td id="LC4" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">head</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+            <td id="LC5" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+            <td id="LC6" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">meta</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>viewport<span class="pl-pds">&quot;</span></span> <span class="pl-e">content</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>width=device-width, initial-scale=1<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+            <td id="LC7" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+            <td id="LC8" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>UTF-8<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+            <td id="LC9" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">title</span>&gt;Chat Bot UI&lt;/<span class="pl-ent">title</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+            <td id="LC10" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+            <td id="LC11" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>stylesheet<span class="pl-pds">&quot;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+            <td id="LC12" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+            <td id="LC13" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&#39;</span>stylesheet prefetch<span class="pl-pds">&#39;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&#39;</span>https://fonts.googleapis.com/css?family=Open+Sans<span class="pl-pds">&#39;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+            <td id="LC14" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&#39;</span>stylesheet prefetch<span class="pl-pds">&#39;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&#39;</span>https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css<span class="pl-pds">&#39;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+            <td id="LC15" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+            <td id="LC16" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>stylesheet<span class="pl-pds">&quot;</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>css/style.css<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+            <td id="LC17" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+            <td id="LC18" class="blob-code blob-code-inner js-file-line">&lt;/<span class="pl-ent">head</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+            <td id="LC19" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+            <td id="LC20" class="blob-code blob-code-inner js-file-line">&lt;<span class="pl-ent">body</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+            <td id="LC21" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+            <td id="LC22" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>chat<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+            <td id="LC23" class="blob-code blob-code-inner js-file-line">		&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>chat-title<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+            <td id="LC24" class="blob-code blob-code-inner js-file-line">			&lt;<span class="pl-ent">h1</span>&gt;Melt&lt;/<span class="pl-ent">h1</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+            <td id="LC25" class="blob-code blob-code-inner js-file-line">			&lt;<span class="pl-ent">h2</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s1"><span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">#555</span></span><span class="pl-pds">&quot;</span></span>&gt;connect. learn. grow.&lt;/<span class="pl-ent">h2</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+            <td id="LC26" class="blob-code blob-code-inner js-file-line">			<span class="pl-c"><span class="pl-c">&lt;!--</span> &lt;figure class=&quot;avatar&quot;&gt;</span></td>
+        </tr>
+        <tr>
+            <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+            <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-c">				&lt;img src=&quot;https://bootdey.com/img/Content/avatar/avatar7.png&quot; /&gt;&lt;/figure&gt; <span class="pl-c">--&gt;</span></span></td>
+        </tr>
+        <tr>
+            <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+            <td id="LC28" class="blob-code blob-code-inner js-file-line">		&lt;/<span class="pl-ent">div</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+            <td id="LC29" class="blob-code blob-code-inner js-file-line">		&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>messages<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+            <td id="LC30" class="blob-code blob-code-inner js-file-line">			&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>messages-content<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+            <td id="LC31" class="blob-code blob-code-inner js-file-line">			&lt;/<span class="pl-ent">div</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+            <td id="LC32" class="blob-code blob-code-inner js-file-line">		&lt;/<span class="pl-ent">div</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+            <td id="LC33" class="blob-code blob-code-inner js-file-line">		&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>message-box<span class="pl-pds">&quot;</span></span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+            <td id="LC34" class="blob-code blob-code-inner js-file-line">			&lt;<span class="pl-ent">textarea</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>text<span class="pl-pds">&quot;</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>message-input<span class="pl-pds">&quot;</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>Type message...<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">textarea</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+            <td id="LC35" class="blob-code blob-code-inner js-file-line">			&lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>submit<span class="pl-pds">&quot;</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>message-submit<span class="pl-pds">&quot;</span></span>&gt;Send&lt;/<span class="pl-ent">button</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+            <td id="LC36" class="blob-code blob-code-inner js-file-line">		&lt;/<span class="pl-ent">div</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+            <td id="LC37" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+            <td id="LC38" class="blob-code blob-code-inner js-file-line">	&lt;/<span class="pl-ent">div</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+            <td id="LC39" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>bg<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+            <td id="LC40" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&#39;</span>http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js<span class="pl-pds">&#39;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+            <td id="LC41" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&#39;</span>https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js<span class="pl-pds">&#39;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+            <td id="LC42" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+            <td id="LC43" class="blob-code blob-code-inner js-file-line">	&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">&quot;</span>js/index.js<span class="pl-pds">&quot;</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+            <td id="LC44" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+            <td id="LC45" class="blob-code blob-code-inner js-file-line">&lt;/<span class="pl-ent">body</span>&gt;</td>
+        </tr>
+        <tr>
+            <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+            <td id="LC46" class="blob-code blob-code-inner js-file-line"></td>
+        </tr>
+        <tr>
+            <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+            <td id="LC47" class="blob-code blob-code-inner js-file-line">&lt;/<span class="pl-ent">html</span>&gt;</td>
+        </tr>
+    </table>
+    <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+        <summary class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1" aria-label="Inline file action toolbar">
+            <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" /></svg>
+        </summary>
+        <details-menu>
+            <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
+                <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+                <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+                <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/agharris73/melt/blame/cd81ff93ca0512bc61826ad2dd1c4c031d7d5984/bot/index.html">View git blame</a></li>
+                <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/agharris73/melt/issues/new">Open new issue</a></li>
+            </ul>
+        </details-menu>
+    </details>
+</div>
+
+</div>
+
+
+
+<details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+        <form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get">
+            <input name="utf8" type="hidden" value="&#x2713;" />
+            <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+            <button type="submit" class="btn" data-close-dialog>Go</button>
+        </form>
+    </details-dialog>
+</details>
+
+
+                </div>
+<div class="modal-backdrop js-touch-events"></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="footer container-lg px-3" role="contentinfo">
+    <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul class="list-style-none d-flex flex-wrap ">
+            <li class="mr-3">&copy; 2018 <span title="0.16692s from unicorn-5994744f98-dr29t">GitHub</span>, Inc.</li>
+            <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+            <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+            <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
+            <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+            <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+        </ul>
+        <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" /></svg>
+        </a>
+        <ul class="list-style-none d-flex flex-wrap ">
+            <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+            <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+            <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+            <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+            <li class="mr-3"><a href="https://blog.github.com" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+            <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+
+
+<div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" /></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
+    </button>
+    You can’t perform that action at this time.
+</div>
+
+
+
+<script crossorigin="anonymous" integrity="sha512-MvNlmXbTAwL0N0zMxw8W6vtjWLf0QFvwVzvN8rZIJNdzFy9OJp2d4LQD9WA2rDNcHewz0PB9x/0G0Z9FOuUWgw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2f69f341e3df821fdcb56e335ef9920.js"></script>
+
+<script crossorigin="anonymous" async="async" integrity="sha512-aiJhsd3F/nIIVsgCX22VmKOUIWfz4zL18eKhdl14lKs8P0jrCG6469JlLXT2l4T6GtWxw7M+Am8Zc2DRJu4Wcw==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-9ddb0f104fdb4def01f1dc9ba427120b.js"></script>
+
+
+
+<div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z" /></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+</div>
+<div class="facebox" id="facebox" style="display:none;">
+    <div class="facebox-popup">
+        <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+        </div>
+        <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+            <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
+        </button>
+    </div>
+</div>
+
+<template id="site-details-dialog">
+    <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+        <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+        <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+            <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+                <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z" /></svg>
+            </button>
+            <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+        </details-dialog>
+    </details>
+</template>
+
+<div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+    <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+    </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+    Press h to open a hovercard with more details.
+</div>
+
+
+
+<meta charset="utf-8">
+<link rel="dns-prefetch" href="https://assets-cdn.github.com">
+<link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+<link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+<link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+<link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+<link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+<link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+<link crossorigin="anonymous" media="all" integrity="sha512-FCg44VGg5ax/5MpZ8otwiPE+/tG1/Sq67mKkl6agbqgoScZtJyXhQSFQMIJfOHMZZ+yXDINb8nEiws60SiLohg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-5aa6d9885579bb2359f66266aee26f3b.css" />
+<link crossorigin="anonymous" media="all" integrity="sha512-TgKanqz7DGdDP4AzIYUrO8HotYJQqK095FgSwOka1FxAjgyD7Vf4DuZunJt1bZt8BajtoaKAxCK/kzFwKJdWlA==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-558080f77c5e1ef1c73e9aac93ccfb39.css" />
+
+
+
+
+<meta name="viewport" content="width=device-width">
+
+<title>melt/index.html at master · agharris73/melt</title>
+<meta name="description" content="Contribute to agharris73/melt development by creating an account on GitHub.">
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+<link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+<meta property="fb:app_id" content="1401488693436528">
+
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/479225?s=400&amp;v=4" />
+<meta property="og:site_name" content="GitHub" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="agharris73/melt" />
+<meta property="og:url" content="https://github.com/agharris73/melt" />
+<meta property="og:description" content="Contribute to agharris73/melt development by creating an account on GitHub." />
+<link rel="assets" href="https://assets-cdn.github.com/">
+<link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzI5ODEzNDY5OjE5NzZjNGEyMTJkMzk0Y2IzYjUzM2ExMDkzODRhYjhjNjk4OGQ4ODBkZTBmMDNjOWY1NjIyNDZkMjIyYzFhNDQ=--3cf1e3bd667bc14c0045454217c48b79347ce4ea">
+<meta name="pjax-timeout" content="1000">
+<link rel="sudo-modal" href="/sessions/sudo_modal">
+<meta name="request-id" content="C0D0:50AD:196DF23:2C824C5:5BCC25A3" data-pjax-transient>
+
+
+<meta name="selected-link" value="repo_source" data-pjax-transient>
+<meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+<meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+<meta name="octolytics-host" content="collector.githubapp.com" />
+<meta name="octolytics-app-id" content="github" />
+<meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" />
+<meta name="octolytics-dimension-request_id" content="C0D0:50AD:196DF23:2C824C5:5BCC25A3" />
+<meta name="octolytics-dimension-region_edge" content="iad" />
+<meta name="octolytics-dimension-region_render" content="iad" />
+<meta name="octolytics-actor-id" content="10912869" />
+<meta name="octolytics-actor-login" content="arjran" />
+<meta name="octolytics-actor-hash" content="dcf0ffa8532d01cb80125ab496de1e87549b70904088b6f0d8203846fad17cc1" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+<meta name="google-analytics" content="UA-3769691-2">
+<meta class="js-ga-set" name="userId" content="bafc9c3d78aa08169367fc3665d0c179" %>
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+<meta name="hostname" content="github.com">
+<meta name="user-login" content="arjran">
+<meta name="expected-hostname" content="github.com">
+<meta name="js-proxy-site-detection-payload" content="M2RmOTdhOTBkODdjZDcwZDAwN2Y2ZjNjZDk3MjdiOWI2ZjE3NzVjOTA1MjYwMjg5MzcyZDRiNzNjYWE1OTVmMXx7InJlbW90ZV9hZGRyZXNzIjoiMTk1LjIwNi4xMDQuMzkiLCJyZXF1ZXN0X2lkIjoiQzBEMDo1MEFEOjE5NkRGMjM6MkM4MjRDNTo1QkNDMjVBMyIsInRpbWVzdGFtcCI6MTU0MDEwNTYzNiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+<meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,SUGGESTED_CHANGES_UX_TEST">
+<meta name="html-safe-nonce" content="86a65904731d5385867ec1ca2c353c3f8a863093">
+<meta http-equiv="x-pjax-version" content="5694c6469a89a10d6f22867d4d877bfb">
+
+<link href="https://github.com/agharris73/melt/commits/master.atom?token=AKaEZSpsvfomNIwvAQn4Zo0iwE-4XV2Dks652WYzwA%3D%3D" rel="alternate" title="Recent Commits to melt:master" type="application/atom+xml">
+<meta name="go-import" content="github.com/agharris73/melt git https://github.com/agharris73/melt.git">
+<meta name="octolytics-dimension-user_id" content="479225" />
+<meta name="octolytics-dimension-user_login" content="agharris73" />
+<meta name="octolytics-dimension-repository_id" content="153535314" />
+<meta name="octolytics-dimension-repository_nwo" content="agharris73/melt" />
+<meta name="octolytics-dimension-repository_public" content="false" />
+<meta name="octolytics-dimension-repository_is_fork" content="false" />
+<meta name="octolytics-dimension-repository_network_root_id" content="153535314" />
+<meta name="octolytics-dimension-repository_network_root_nwo" content="agharris73/melt" />
+<meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+<link rel="canonical" href="https://github.com/agharris73/melt/blob/master/bot/index.html" data-pjax-transient>
+
+<meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+<meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+<link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+<link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+<meta name="theme-color" content="#1e2327">
+
+<meta name="u2f-support" content="true">
+<link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+<link href="~/css/bot.css" />
+<script src="~/js/bot.js"></script>

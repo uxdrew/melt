@@ -8,18 +8,17 @@
         width: 100%;
         height: 100%;
     }
-
-    </style>
+</style>
 
 <script>
 
     $(document).ready(function () {
 
-        @{
+        @*@{
             Model.PercentToWorthlessness =  100;
             Model.Offset = ((@Model.PercentToWorthlessness * 3.8M) / 100) + 1;
 
-            }
+            }*@
 
         $("#divClimber").parent().css({ position: 'relative' });
         $("#divClimber").css({ top: (108 * @Model.Offset) - 50, left: ((320 - ((85 * @Model.Offset * 0.70) - 55))) + 25, position: 'absolute' });
@@ -35,10 +34,10 @@
 </script>
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Watch out below!</strong> Your challengers debt is melting! <a href="!#">Lead More</a>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+    <strong>Watch out below!</strong> Your challengers debt is melting! <a href="!#">Lead More</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
 </div>
 
 <div class="wrapper">
@@ -49,7 +48,7 @@
     </div>
     <article class="main" style="margin-top:10px" data-aos="fade-down">
         <div id="divClimber" class="overlay">
-            @if (Model.PercentToWorthlessness == 0)
+            @if (Model.PercentToWorthlessness == 1)
             {
                 <img src="~/images/winningClimber.png" width="40" />
             }
@@ -58,7 +57,7 @@
                 <img src="~/images/climber.png" width="35" />
             }
         </div>
-     </article>
+    </article>
 
 
     <!-- Page Content -->
@@ -71,7 +70,7 @@
                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" width="50" class="img-radius"
                              alt="User-Profile-Image">
                     </div>
-                    
+
                     <h5 class="card-title text-muted">Andrew Harris</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Player One</h6>
                     <p class="card-text text-muted small">
@@ -93,36 +92,37 @@
             <div class="card" data-aos="fade-right">
                 <div class="card-body">
 
-                  <h5 class="card-title text-muted">Achievements</h5>
-                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy1" class="original" width="25" >
-                    <img src="http://uxdrew.io/melt/achievement_on.png" data-aos="fade-in" id="imgTrophy2" class="grayscale" width="25" >
-                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy3" class="grayscale" width="25" >
-                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy4" class="grayscale" width="25" >
-                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy5" class="grayscale" width="25" >
+                    <h5 class="card-title text-muted">Achievements</h5>
+                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy1" class="original" width="25">
+                    <img src="http://uxdrew.io/melt/achievement_on.png" data-aos="fade-in" id="imgTrophy2" class="grayscale" width="25">
+                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy3" class="grayscale" width="25">
+                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy4" class="grayscale" width="25">
+                    <img src="http://uxdrew.io/melt/achievement_on.png" id="imgTrophy5" class="grayscale" width="25">
                 </div>
             </div>
         </div>
 
-                <div class="container pt-2">
+        <div class="container pt-2">
             <div class="card" data-aos="fade-right">
                 <div class="card-body">
 
-                  <h5 class="card-title text-muted">Predictive</h5>
+                    <h5 class="card-title text-muted">Predictive</h5>
                     <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <input type="range" min="1" max="100" value="@Model.PercentToWorthlessness" class="slider" id="myRange">
                         <p> <span id="slider_value" style="color:#555; text-align:left" class="small"></span></p>
-</div>
+                        <button id="btnUpdateMM" style="color:blue">Update</button>
+                    </div>
                 </div>
             </div>
         </div>
 
     </aside>
     <aside class="aside aside-2" data-aos="fade-left">
-                <div class="container " data-aos="fade-right">
+        <div class="container " data-aos="fade-right">
             <div class="card">
                 <div class="card-body">
                     <div>
-                                            <h6 class="card-subtitle mb-2 text-muted">Age Range</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Age Range</h6>
 
 
                         <input type="text" id="range3" value="" name="range" />
@@ -132,22 +132,22 @@
             </div>
         </div>
 
-                  <div class="container pt-2">
+        <div class="container pt-2">
             <div class="card" data-aos="fade-right">
                 <div class="card-body">
                     <div>
-                    <h6 class="card-subtitle mb-2 text-muted">Marital Status</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Marital Status</h6>
                     </div>
                 </div>
             </div>
         </div>
 
-                <div class="container pt-2">
+        <div class="container pt-2">
             <div class="card" data-aos="fade-right">
                 <div class="card-body">
                     <div>
-                    <h6 class="card-subtitle mb-2 text-muted">Income</h6>
-                    <input type="text" id="range" value="" name="range" />
+                        <h6 class="card-subtitle mb-2 text-muted">Income</h6>
+                        <input type="text" id="range" value="" name="range" />
                     </div>
                 </div>
             </div>
@@ -237,13 +237,13 @@
 </script>
 
 <script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("slider_value");
-output.innerHTML = slider.value;
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("slider_value");
+    output.innerHTML = slider.value;
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+    }
 </script>
 
 <script>
@@ -268,5 +268,5 @@ slider.oninput = function() {
 
     });
 </script>
-<script src="~/lib/signalr/dist/browser/signalr.js"></script>   
-<script src="~/js/chat.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/dashSignalR.js"></script>
