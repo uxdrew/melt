@@ -47,7 +47,7 @@
     <div id="divToast" style="display:none;">
         This is a div that should be shown.
     </div>
-    <article class="main" data-aos="fade-down">
+    <article class="main" style="margin-top:10px" data-aos="fade-down">
         <div id="divClimber" class="overlay">
             @if (Model.PercentToWorthlessness == 0)
             {
@@ -81,7 +81,7 @@
 
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                             aria-valuemax="100" style="        width: 70%">
+                             aria-valuemax="100" style="width: 70%">
                             70%
                         </div>
                     </div>
@@ -157,9 +157,7 @@
             <div class="card">
                 <div class="card-body">
                     <div>
-                                            <h6 class="card-subtitle mb-2 text-muted">Education</h6>
-
-
+                        <h6 class="card-subtitle mb-2 text-muted">Education</h6>
                         <input type="text" id="range4" value="" name="range" />
 
                     </div>
@@ -169,6 +167,7 @@
 
     </aside>
 </div>
+
 
 <script>
     AOS.init({
