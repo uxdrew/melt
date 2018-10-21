@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Melt.YodleeObjects;
+using Melt.Data;
 
 namespace Melt
 {
@@ -14,7 +16,12 @@ namespace Melt
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();            
+        }
+
+        public void callSproc(ISqlAccess sqlAccess)
+        {
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
