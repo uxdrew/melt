@@ -48,11 +48,11 @@
         }
 
         .aside-1 {
-            background: #30303d;
+            background: #ecf8fd;
         }
 
         .aside-2 {
-            background: #30303d;
+            background: #ecf8fd;
         }
 
         @@media all and (min-width: 600px) {
@@ -84,7 +84,7 @@
         }
 
         body {
-            background-color: #30303d;
+            background-color: #ecf8fd;
             color: #fff;
         }
 
@@ -120,6 +120,11 @@
         .img-radius {
             border-radius: 50%;
         }
+
+        .card {
+            border-radius: 0;
+            border: none;
+        }
     </style>
 
     <!-- Bootstrap core JavaScript -->
@@ -135,24 +140,13 @@
     <script src="https://uxdrew.io/aos/aos.js"></script>
 
 
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/funnel.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>  
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/melt/home.html">
-            <img src="http://uxdrew.io/melt/brand_alt.svg" width="50" height="50" class="d-inline-block align-top" alt="">
+            <img src="http://uxdrew.io/melt/brand_alt.svg" width="50" height="50" class="d-inline-block align-top ml-3" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -160,10 +154,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                @*<li class="nav-item active">
                     <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
+                </li>*@
+                @*<li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         Settings
@@ -174,14 +168,14 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">User</a>
                     </div>
-                </li>
+                </li>*@
             </ul>
             <a href="https://uxdrew.io/melt/home.html" class="btn btn-outline-success ml-auto" role="button">Sign Out</a>
         </div>
 
     </nav>
     
-    <div class="container body-content">
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>
