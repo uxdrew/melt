@@ -13,13 +13,15 @@
     $(document).ready(function () {
 
         @{
-            Model.PercentToWorthlessness =  0;
+            Model.PercentToWorthlessness =  100;
             Model.Offset = ((@Model.PercentToWorthlessness * 3.8M) / 100) + 1;
             
             }
 
         $("#divClimber").parent().css({ position: 'relative' });
-        $("#divClimber").css({ top: (108 * @Model.Offset) -50, left: 290, position: 'absolute' });
+        $("#divClimber").css({ top: (108 * @Model.Offset) - 50, left: ((280 - ((85 * @Model.Offset * 0.70) - 55))) + 25, position: 'absolute' });
+
+        //
     });
 
     $(function move() {
@@ -34,7 +36,7 @@
         <div id="divClimber" class="overlay">
             @if (Model.PercentToWorthlessness == 0)
             {
-                <img src="~/images/winningClimber.png" width="35" />
+                <img src="~/images/winningClimber.png" width="40" />
             }
             else
             {
