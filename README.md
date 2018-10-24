@@ -1,6 +1,6 @@
 ## Melt
 
-<p align="center">![alt text](http://uxdrew.io/melt/brand.png)</p>
+![alt text](http://uxdrew.io/melt/brand.png)
 
 
 **First act:**
