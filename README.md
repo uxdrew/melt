@@ -6,3 +6,8 @@ Are you in a mountain of debt?  Let Melt help.  Melt provides insight and incent
 
 ![dashboard view](http://uxdrew.io/melt/dashboard-1.png)
 
+A simple nudge to make a micropayment to help reduct the stress of large monthly balances can help pay down debt smarter and faster. 
+
+![Melt Bot](http://uxdrew.io/public_html/melt/bot/melt-bot.gif)
+
+
