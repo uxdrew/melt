@@ -12,7 +12,7 @@ Using the Yodlee data aggregation API, relavent data is collected and presented 
 
 
 **Second Act:**
-A simple nudge can make all the difference. Using Sydney by Synchrony, you can make a prompted micropayment; to help reduce the stress of a large monthly balances which can help pay down debt smarter and faster. 
+A simple nudge can make all the difference. Using Sydney by Synchrony, you can make a prompted micropayment; helping reduce the stress of a unsightly monthly balance which will allow you to help pay down debt smarter and faster. 
 
 ![Melt Bot](http://uxdrew.io/melt/bot/melt-bot.gif)
 
