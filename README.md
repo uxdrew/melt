@@ -6,6 +6,8 @@
 **First act:**
 Are you in a mountain of debt?  Let Melt help.  Melt provides insight and incentive to let YOU take control of your debt.  Connect to peers for helpful tips and support.  Are you ready to Melt your debt away?
 
+Using the Yodlee data aggregate API we capture relavent data and present in a fun, engaging UI allowing the user a path to financial literacy in understanding where they stand on the mountain of debt and how to climb to the top by utiizing data and peer support through engaging challenges and social debt support groups. 
+
 ![dashboard view](http://uxdrew.io/melt/dashboard-1.png)
 
 
