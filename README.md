@@ -10,7 +10,7 @@ Are you in a mountain of debt?  Let Melt help.  Melt provides insight and incent
 
 
 **Second Act:**
-A simple nudge to make a micropayment to help reduct the stress of large monthly balances can help pay down debt smarter and faster. 
+A simple nudge can make all the differnce. Using Sydney by Synchrony to make a micropayment to help reduct the stress of large monthly balances can help pay down debt smarter and faster. 
 
 ![Melt Bot](http://uxdrew.io/melt/bot/melt-bot.gif)
 
